@@ -1,0 +1,818 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$font: 'Poppins', 'sans-serif';
+$bgColor: #0E0E0E;
+$greyColor: #888888;
+
+body {
+    background-color: $bgColor;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-btn {
+    outline: none;
+    border: none;
+    height: 100%;
+    font-family: $font;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
+    color: #888888;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: #B7B7B7;
+    transition: 0.3s;
+}
+
+.active {
+    border-bottom: 3px solid white;
+    color: white;
+}
+
+
+.profile-img {
+    width: 100%;
+}
+
+#profile-name {
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.preview-box {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+
+    .thumbnail-container {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        height: 100%;
+        width: 100%;
+
+
+        .thumbnail-shadow {
+            background: rgb(22,22,22);
+            background: linear-gradient(180deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9248074229691877) 23%, rgba(22,22,22,0.8911939775910365) 30%, rgba(22,22,22,0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .thumbnail-img {
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    .preview-title {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        padding: 0px 15px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+
+        .title {
+            font-family: $font;
+            color: white;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #content-container {
+        display: grid;
+        grid-template-rows: 18vh 60px auto;
+        height: auto;
+        padding-bottom: 60px;
+
+        #profile-container {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            #banner-container {
+                background-color: grey;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .banner-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            #banner-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgb(22,22,22);
+                background: linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9248074229691877) 23%, rgba(22,22,22,0.8911939775910365) 30%, rgba(22,22,22,0) 100%);
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+            }
+
+            #profile-info {
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                padding: 15px 0px;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: max-content auto max-content;
+                grid-column-gap: 15px;
+                align-items: center;
+
+                #profile-img-container {
+                    height: 50px;
+                    width: 50px;
+                    background-color: $bgColor;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #edit-btn-container {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+
+                    #btn-bg {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 2;
+                        background-color: white;
+                        opacity: 0.05;
+                    }
+
+                    #edit-btn {
+                        background-color: transparent;
+                        background-image: url('../img/icons/settings.png');
+                        background-repeat: no-repeat;
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        background-size: 45%;
+                        background-position: center center;
+                        position: absolute;
+                        z-index: 3;
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        #buttons-container {
+            background-color: $bgColor;
+            position: sticky;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            z-index: 3;
+        }
+
+        #profile-content-container {
+            margin-top: 20px;
+            height: auto;
+
+            #previews {
+                display: show;
+
+                #preview-grid {
+                    display: grid;
+                    width: 90%;
+                    margin: 0 auto;
+                    grid-template-rows: repeat(auto, max-content);
+                    grid-row-gap: 10px;
+                }
+            }
+
+            #description {
+                display: show;
+
+                #description-grid {
+                    width: 90%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-rows: repeat(auto, max-content);
+                    grid-row-gap: 40px;
+
+                    .grid-box {
+                        display: grid;
+                        grid-template-rows: max-content auto;
+                        grid-row-gap: 5px;
+
+                        .grid-title {
+                            font-family: $font;
+                            color: white;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        }
+
+                        .grid-sub {
+                            font-family: $font;
+                            color: #adadb2;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    #login-container {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        display: none;
+
+        #login-content {
+            text-align: center;
+            width: 350px;
+            max-width: 90%;
+
+            a {
+                font-family: $font;
+                font-weight: 600;
+                color: white;
+                text-decoration: none;
+                background-color: #9C4343;
+                width: 100%;
+                display: block;
+                padding: 15px 0px;
+                border-radius: 15px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1050px) {
+
+    #content-container {
+        display: grid;
+        grid-template-rows: 18vh 60px auto;
+        height: auto;
+        padding-bottom: 60px;
+
+        #profile-container {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            #banner-container {
+                background-color: grey;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .banner-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            #banner-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgb(22,22,22);
+                background: linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9248074229691877) 23%, rgba(22,22,22,0.8911939775910365) 30%, rgba(22,22,22,0) 100%);
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+            }
+
+            #profile-info {
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                padding: 15px 0px;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: max-content auto max-content;
+                grid-column-gap: 30px;
+                align-items: center;
+
+                #profile-img-container {
+                    height: 7vh;
+                    width: 7vh;
+                    background-color: $bgColor;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #edit-btn-container {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+
+                    #btn-bg {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 2;
+                        background-color: white;
+                        opacity: 0.05;
+                    }
+
+                    #edit-btn {
+                        background-color: transparent;
+                        background-image: url('../img/icons/settings.png');
+                        background-repeat: no-repeat;
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        background-size: 45%;
+                        background-position: center center;
+                        position: absolute;
+                        z-index: 3;
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        #buttons-container {
+            background-color: $bgColor;
+            position: sticky;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            z-index: 3;
+        }
+
+        #profile-content-container {
+            margin-top: 40px;
+            height: auto;
+
+            #previews {
+                display: none;
+
+                #preview-grid {
+                    display: grid;
+                    width: 90%;
+                    margin: 0 auto;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 15px;
+                    grid-row-gap: 15px;
+                }
+            }
+
+            #description {
+                display: none;
+
+                #description-grid {
+                    width: 90%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-rows: repeat(auto, max-content);
+                    grid-row-gap: 40px;
+
+                    .grid-box {
+                        display: grid;
+                        grid-template-rows: max-content auto;
+                        grid-row-gap: 5px;
+
+                        .grid-title {
+                            font-family: $font;
+                            color: white;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        }
+
+                        .grid-sub {
+                            font-family: $font;
+                            color: #adadb2;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #profile-name {
+        font-size: 1.2rem;
+    }
+
+    #login-content {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1400px) {
+
+    body {
+        padding-left: 250px;
+    }
+
+    #content-container {
+        display: grid;
+        grid-template-rows: 150px 60px auto;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 25px 35px;
+
+        #profile-container {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 15px 15px 0px 0px;
+
+            #banner-container {
+                background-color: grey;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .banner-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            #banner-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgb(22,22,22);
+                background: linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9248074229691877) 23%, rgba(22,22,22,0.8911939775910365) 30%, rgba(22,22,22,0) 100%);
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+            }
+
+            #profile-info {
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                padding: 15px 0px;
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: max-content auto max-content;
+                grid-column-gap: 30px;
+                align-items: center;
+
+                #profile-img-container {
+                    height: 70px;
+                    width: 70px;
+                    background-color: $bgColor;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #edit-btn-container {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+
+                    #btn-bg {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 2;
+                        background-color: white;
+                        opacity: 0.05;
+                    }
+
+                    #edit-btn {
+                        background-color: transparent;
+                        background-image: url('../img/icons/settings.png');
+                        background-repeat: no-repeat;
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        background-size: 45%;
+                        background-position: center center;
+                        position: absolute;
+                        z-index: 3;
+                        top: 0;
+                    }
+                }
+            }
+        }
+
+        #buttons-container {
+            background-color: $bgColor;
+            position: sticky;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            z-index: 3;
+        }
+
+        #profile-content-container {
+            margin-top: 40px;
+            height: auto;
+
+            #previews {
+                display: none;
+
+                #preview-grid {
+                    display: grid;
+                    width: 100%;
+                    margin: 0 auto;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-column-gap: 10px;
+                    grid-row-gap: 10px;
+                }
+            }
+
+            #description {
+                display: none;
+
+                #description-grid {
+                    width: 90%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-rows: repeat(auto, max-content);
+                    grid-row-gap: 40px;
+
+                    .grid-box {
+                        display: grid;
+                        grid-template-rows: max-content auto;
+                        grid-row-gap: 5px;
+
+                        .grid-title {
+                            font-family: $font;
+                            color: white;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        }
+
+                        .grid-sub {
+                            font-family: $font;
+                            color: #adadb2;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #login-content {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+    body {
+        padding-left: 250px;
+        overflow-y: auto;
+    }
+
+    #content-container {
+        display: grid;
+        grid-template-rows: 150px 60px auto;
+        min-height: 100vh;
+        margin: 0 auto;
+        min-width: 700px;
+        max-width: 100%;
+        padding: 25px 35px;
+
+        #profile-container {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 15px 15px 0px 0px;
+
+            #banner-container {
+                background-color: grey;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .banner-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            #banner-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgb(22,22,22);
+                background: linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(22,22,22,0.9248074229691877) 23%, rgba(22,22,22,0.8911939775910365) 30%, rgba(22,22,22,0) 100%);
+                z-index: 2;
+                height: 100%;
+                width: 100%;
+            }
+
+            #profile-info {
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                padding: 15px 0px;
+                min-width: 1400px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: max-content auto max-content;
+                grid-column-gap: 30px;
+                align-items: center;
+
+                #profile-img-container {
+                    height: 70px;
+                    width: 70px;
+                    background-color: $bgColor;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #edit-btn-container {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    position: relative;
+
+                    #btn-bg {
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 2;
+                        background-color: white;
+                        opacity: 0.05;
+                    }
+
+                    #edit-btn {
+                        background-color: transparent;
+                        background-image: url('../img/icons/settings.png');
+                        background-repeat: no-repeat;
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        background-size: 45%;
+                        background-position: center center;
+                        position: absolute;
+                        z-index: 3;
+                        top: 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        #buttons-container {
+            background-color: $bgColor;
+            position: sticky;
+            top: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            justify-content: center;
+            z-index: 3;
+        }
+
+        #profile-content-container {
+            margin-top: 40px;
+            height: auto;
+
+            #previews {
+                display: show;
+
+                #preview-grid {
+                    display: grid;
+                    width: 1400px;
+                    margin: 0 auto;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-column-gap: 10px;
+                    grid-row-gap: 10px;
+                }
+            }
+
+            #description {
+                display: none;
+
+                #description-grid {
+                    width: 90%;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-rows: repeat(auto, max-content);
+                    grid-row-gap: 40px;
+
+                    .grid-box {
+                        display: grid;
+                        grid-template-rows: max-content auto;
+                        grid-row-gap: 5px;
+
+                        .grid-title {
+                            font-family: $font;
+                            color: white;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                        }
+
+                        .grid-sub {
+                            font-family: $font;
+                            color: #adadb2;
+                            font-size: 0.8rem;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    #login-content {
+        display: none;
+    }
+
+}

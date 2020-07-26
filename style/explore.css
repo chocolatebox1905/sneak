@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #0E0E0E;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+#desktop-filler {
+  background-color: transparent;
+}
+
+#content-container {
+  min-height: 100vh;
+  width: auto;
+}
+
+#content-container #content {
+  background-color: #0E0E0E;
+}
+
+#content-container #content #search-title {
+  font-family: "Poppins", "sans-serif";
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+}
+
+#content-container #content #search-container {
+  background-color: #2d2d2d;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  border-radius: 15px;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 20px;
+  -ms-grid-columns: max-content auto;
+      grid-template-columns: -webkit-max-content auto;
+      grid-template-columns: max-content auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+}
+
+#content-container #content #search-container #search-img {
+  height: 20px;
+}
+
+#content-container #content #search-container #search-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Poppins", "sans-serif";
+  font-weight: 600;
+  font-size: 13px;
+  color: white;
+}
+
+#content-container #content #search-container #search-input::-webkit-input-placeholder {
+  color: #888888;
+}
+
+#content-container #content #search-container #search-input:-ms-input-placeholder {
+  color: #888888;
+}
+
+#content-container #content #search-container #search-input::-ms-input-placeholder {
+  color: #888888;
+}
+
+#content-container #content #search-container #search-input::placeholder {
+  color: #888888;
+}
+
+@media only screen and (max-width: 767px) {
+  #desktop-filler {
+    display: none;
+  }
+  #content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1050px) {
+  #content {
+    width: 100%;
+    padding: 0px 35px;
+  }
+}
+
+@media only screen and (min-width: 1050px) and (max-width: 1400px) {
+  #content-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 250px auto;
+        grid-template-columns: 250px auto;
+  }
+  #content-container #content {
+    width: 100%;
+    padding: 0px 35px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #content-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 250px auto;
+        grid-template-columns: 250px auto;
+  }
+  #content-container #content {
+    width: 100%;
+    padding: 0px 35px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=explore.css.map */

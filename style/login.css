@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+li {
+  list-style: none;
+}
+
+#logo {
+  height: 2.2vh;
+}
+
+@media only screen and (max-width: 650px) {
+  #body-container {
+    width: 90%;
+    margin-top: 15px;
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1050px) {
+  #body-container {
+    width: 90%;
+    background-color: red;
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

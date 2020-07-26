@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sneakpeek</title>
+        <link rel="stylesheet" type="text/css" href="style/home.css">
+        <link rel="stylesheet" type="text/css" href="style/navigation.css">
+        <meta charset="utf-8">
+        <meta name="description" content="Discover new content">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div id="navigation-container">
+            <a href="" class="nav-a">
+                <img src="img/icons/home-w.png" class="nav-img">
+            </a>
+            <a href="" class="nav-a">
+                <img src="img/icons/trending.png" class="nav-img">
+            </a>
+            <a href="" class="nav-a">
+                <img src="img/icons/heart.png" class="nav-img">
+            </a>
+            <a href="" class="nav-a">
+                <img src="img/icons/profile.png" class="nav-img">
+            </a>
+        </div>
+
+        <div id="content-container">
+            <form id="search-container">
+                <img src="img/icons/search-w.png" id="search-icon">
+                <input type="text" placeholder="Search">
+            </form>
+
+            <div id="myplaylists-container">
+                <h3 class="cont-tag center">My playlists</h3>
+                <div id="playlists-grid">
+                    <button id="new-playlist-btn"></button>
+                    <div class="playlist">
+                        <p>sd</p>
+                    </div>
+                    <div class="playlist">
+                        <p>sd</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="categories-container">
+                <h3 class="cont-tag">Categories</h3>
+                <div id="categories-grid">
+                    <div class="cat top"><p>sdfdf</p></div>
+                    <div class="cat top"><p>sdfdf</p></div>
+                    <div class="cat top"><p>sdfdf</p></div>
+                    <div class="cat top"><p>sdfdf</p></div>
+                    <div class="cat"><p>sdfdf</p></div>
+                    <div class="cat"><p>sdfdf</p></div>
+                    <div class="cat"><p>sdfdf</p></div>
+                    <div class="cat"><p>sdfdf</p></div>
+                    <div class="cat"><p>sdfdf</p></div>
+                    <div class="cat"><p>sdfdf</p></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        var cw = $('.top').width();
+            $('.top').css({
+                'height': cw + 'px'
+            });
+    </script>
+</html>
