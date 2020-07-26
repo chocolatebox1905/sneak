@@ -14,14 +14,14 @@ a {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #0E0E0E;
+    background-color: #121212;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    height: 50px;
+    height: 60px;
   }
   #navigation-container .nav-a {
     width: 100%;

@@ -9,7 +9,7 @@ a {
 }
 
 $font: 'Poppins', 'sans-serif';
-$bgColor: #0E0E0E;
+$bgColor: #121212;
 $greyColor: #888888;
 
 @media only screen and (max-width: 767px) {
@@ -22,7 +22,7 @@ $greyColor: #888888;
         width: 100%;
         display: flex;
         justify-content: space-around;
-        height: 50px;
+        height: 60px;
 
         .nav-a {
             width: 100%;

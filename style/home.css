@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #0E0E0E;
+  background-color: #121212;
   overflow-x: hidden;
   width: 100vw;
   height: auto;
@@ -30,7 +30,6 @@ body {
     font-weight: 600;
   }
   #content-container #search-container {
-    background-color: red;
     width: 95%;
     margin: 0 auto;
     margin-top: 20px;
