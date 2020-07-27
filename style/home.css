@@ -18,10 +18,11 @@ body {
     width: 100%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (max-content)[3];
-        grid-template-rows: repeat(3, -webkit-max-content);
-        grid-template-rows: repeat(3, max-content);
+    -ms-grid-rows: (max-content)[2];
+        grid-template-rows: repeat(2, -webkit-max-content);
+        grid-template-rows: repeat(2, max-content);
     grid-row-gap: 25px;
+    margin-top: 20px;
   }
   #content-container .cont-tag {
     font-family: "Poppins", "sans-serif";
@@ -47,6 +48,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: none;
   }
   #content-container #search-container #search-icon {
     height: 18px;
@@ -97,6 +99,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 95%;
+    margin: 0 auto;
+    overflow: auto;
   }
   #content-container #myplaylists-container #playlists-grid #new-playlist-btn {
     height: 100px;
@@ -151,6 +156,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 150px;
   }
 }
 /*# sourceMappingURL=home.css.map */

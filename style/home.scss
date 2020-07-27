@@ -21,8 +21,9 @@ body {
     #content-container {
         width: 100%;
         display: grid;
-        grid-template-rows: repeat(3, max-content);
+        grid-template-rows: repeat(2, max-content);
         grid-row-gap: 25px;
+        margin-top: 20px;
 
         .cont-tag {
             font-family: $font;
@@ -44,6 +45,7 @@ body {
             overflow: hidden;
             padding: 0px 20px;
             align-items: center;
+            display: none;
 
             #search-icon {
                 height: 18px;
@@ -79,6 +81,9 @@ body {
             #playlists-grid {
                 display: flex;
                 flex-direction: row;
+                width: 95%;
+                margin: 0 auto;
+                overflow: auto;
 
                 #new-playlist-btn {
                     height: 100px;
@@ -126,6 +131,7 @@ body {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    height: 150px;
                 }
             }
         }
