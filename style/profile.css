@@ -80,7 +80,7 @@ body {
   #content-container #info-container #profile-info #user-info .user-name {
     font-weight: 600;
     color: #fefefe;
-    font-size: 15px;
+    font-size: 17px;
   }
   #content-container #info-container #profile-info #user-info #sub-btn {
     border: none;
@@ -89,7 +89,7 @@ body {
     font-family: "Poppins", "sans-serif";
     font-weight: 600;
     color: #fefefe;
-    font-size: 12px;
+    font-size: 13px;
     padding: 10px 20px;
   }
   #content-container #info-container #banner-container {
@@ -135,7 +135,7 @@ body {
         grid-template-columns: -webkit-max-content -webkit-max-content;
         grid-template-columns: max-content max-content;
     grid-column-gap: 15px;
-    padding: 15px 0px;
+    padding: 20px 0px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -159,7 +159,7 @@ body {
   }
   #content-container #profile-btn-container #profile-buttons .active {
     color: #fefefe;
-    font-size: 16px;
+    font-size: 17px;
   }
   #content-container #previews-container {
     width: 95%;
