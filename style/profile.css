@@ -16,17 +16,16 @@ body {
 @media only screen and (max-width: 767px) {
   #content-container {
     width: 100%;
-    height: 5000px;
+    height: 1400px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (max-content)[2];
-        grid-template-rows: repeat(2, -webkit-max-content);
-        grid-template-rows: repeat(2, max-content);
-    grid-row-gap: 15px;
+    -ms-grid-rows: (max-content)[3];
+        grid-template-rows: repeat(3, -webkit-max-content);
+        grid-template-rows: repeat(3, max-content);
   }
   #content-container #info-container {
     background-color: red;
-    height: 150px;
+    height: 130px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,9 +41,8 @@ body {
     position: absolute;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto max-content;
-        grid-template-rows: auto -webkit-max-content;
-        grid-template-rows: auto max-content;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
     z-index: 2;
     margin: 0 auto;
   }
@@ -94,48 +92,6 @@ body {
     font-size: 12px;
     padding: 10px 20px;
   }
-  #content-container #info-container #profile-info #profile-btn-container {
-    width: 100%;
-    background-color: transparent;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0px;
-  }
-  #content-container #info-container #profile-info #profile-btn-container #profile-buttons {
-    width: 95%;
-    z-index: 2;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: max-content max-content;
-        grid-template-columns: -webkit-max-content -webkit-max-content;
-        grid-template-columns: max-content max-content;
-    grid-column-gap: 15px;
-    height: 40px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0 auto;
-  }
-  #content-container #info-container #profile-info #profile-btn-container #profile-buttons .tab-btn {
-    border: none;
-    background-color: transparent;
-    height: 20px;
-    font-family: "Poppins", "sans-serif";
-    color: #6A6A6A;
-    font-size: 13px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    font-weight: 600;
-    outline: none;
-  }
-  #content-container #info-container #profile-info #profile-btn-container #profile-buttons .active {
-    color: #fefefe;
-    font-size: 15px;
-  }
   #content-container #info-container #banner-container {
     position: relative;
     height: 100%;
@@ -153,24 +109,67 @@ body {
   #content-container #info-container #banner-container #banner-shadow {
     position: absolute;
     background: #121212;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 0.499037)), color-stop(87%, #121212), to(#121212));
-    background: linear-gradient(180deg, rgba(18, 18, 18, 0.499037) 0%, #121212 87%, #121212 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 18, 18, 0.499037)), to(#121212));
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0.499037) 0%, #121212 100%);
     height: 100%;
     width: 100%;
   }
   #content-container #info-container #banner-container #banner {
     height: 100%;
   }
+  #content-container #profile-btn-container {
+    width: 100%;
+    background: #121212;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(18, 18, 18, 0)), color-stop(95%, #121212), to(#121212));
+    background: linear-gradient(0deg, rgba(18, 18, 18, 0) 0%, #121212 95%, #121212 100%);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 2;
+  }
+  #content-container #profile-btn-container #profile-buttons {
+    width: 95%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: max-content max-content;
+        grid-template-columns: -webkit-max-content -webkit-max-content;
+        grid-template-columns: max-content max-content;
+    grid-column-gap: 15px;
+    padding: 15px 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+  #content-container #profile-btn-container #profile-buttons .tab-btn {
+    border: none;
+    background-color: transparent;
+    font-family: "Poppins", "sans-serif";
+    color: #6A6A6A;
+    height: 25px;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-weight: 600;
+    outline: none;
+  }
+  #content-container #profile-btn-container #profile-buttons .active {
+    color: #fefefe;
+    font-size: 16px;
+  }
   #content-container #previews-container {
     width: 95%;
     margin: 0 auto;
-    height: 100px;
+    height: auto;
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: (max-content)[auto];
         grid-template-rows: repeat(auto, -webkit-max-content);
         grid-template-rows: repeat(auto, max-content);
-    grid-row-gap: 10px;
   }
   #content-container #previews-container .preview {
     width: 100%;

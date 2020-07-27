@@ -20,14 +20,13 @@ body {
 @media only screen and (max-width: 767px) {
     #content-container {
         width: 100%;
-        height: 5000px;
+        height: 1400px;
         display: grid;
-        grid-template-rows: repeat(2, max-content);
-        grid-row-gap: 15px;
+        grid-template-rows: repeat(3, max-content);
 
         #info-container {
             background-color: red;
-            height: 150px;
+            height: 130px;
             position: relative;
             display: flex;
             justify-content: center;
@@ -38,7 +37,7 @@ body {
                 width: 100%;
                 position: absolute;
                 display: grid;
-                grid-template-rows: auto max-content;
+                grid-template-rows: auto;
                 z-index: 2;
                 margin: 0 auto;
 
@@ -82,42 +81,6 @@ body {
                     }
                 }
 
-                #profile-btn-container {
-                    width: 100%;
-                    background-color: transparent;
-                    position: sticky;
-                    position: -webkit-sticky;
-                    top: 0px;
-
-                    #profile-buttons {
-                        width: 95%;
-                        z-index: 2;
-                        display: grid;
-                        grid-template-columns: max-content max-content;
-                        grid-column-gap: 15px;
-                        height: 40px;
-                        align-items: center;
-                        margin: 0 auto;
-        
-                        .tab-btn {
-                            border: none;
-                            background-color: transparent;
-                            height: 20px;
-                            font-family: $font;
-                            color: #6A6A6A;
-                            font-size: 13px;
-                            display: flex;
-                            align-items: flex-end;
-                            font-weight: 600;
-                            outline: none;
-                        }
-        
-                        .active {
-                            color: #fefefe;
-                            font-size: 15px;
-                        }
-                    }
-                }
             }
 
             #banner-container {
@@ -131,7 +94,7 @@ body {
                 #banner-shadow {
                     position: absolute;
                     background: rgb(18,18,18);
-                    background: linear-gradient(180deg, rgba(18,18,18,0.4990371148459384) 0%, rgba(18,18,18,1) 87%, rgba(18,18,18,1) 100%);
+                    background: linear-gradient(180deg, rgba(18,18,18,0.4990371148459384) 0%, rgba(18,18,18,1) 100%);
                     height: 100%;
                     width: 100%;
                 }
@@ -141,14 +104,51 @@ body {
                 }
             }
         }
+   
+        #profile-btn-container {
+            width: 100%;
+            background: rgb(18,18,18);
+            background: linear-gradient(0deg, rgba(18,18,18,0) 0%, rgba(18,18,18,1) 95%, rgba(18,18,18,1) 100%);
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0px;
+            z-index: 2;
+
+            #profile-buttons {
+                width: 95%;
+                display: grid;
+                grid-template-columns: max-content max-content;
+                grid-column-gap: 15px;
+                padding: 15px 0px;
+                align-items: center;
+                margin: 0 auto;
+
+                .tab-btn {
+                    border: none;
+                    background-color: transparent;
+                    font-family: $font;
+                    color: #6A6A6A;
+                    height: 25px;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: flex-end;
+                    font-weight: 600;
+                    outline: none;
+                }
+
+                .active {
+                    color: #fefefe;
+                    font-size: 16px;
+                }
+            }
+        }
 
         #previews-container {
             width: 95%;
             margin: 0 auto;
-            height: 100px;
+            height: auto;
             display: grid;
             grid-template-rows: repeat(auto, max-content);
-            grid-row-gap: 10px;
 
             .preview {
                 width: 100%;
