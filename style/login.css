@@ -29,22 +29,48 @@ li {
 }
 
 #logo {
-  height: 2.2vh;
+  height: 2vh;
+}
+
+h1 {
+  font-family: "Poppins", "sans-serif";
+  color: #fefefe;
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media only screen and (max-width: 650px) {
   #body-container {
     width: 90%;
     margin-top: 15px;
-    background-color: red;
+    background-color: green;
   }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 1050px) {
-  #body-container {
-    width: 90%;
+@media only screen and (min-width: 1050px) {
+  body {
+    overflow: hidden;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #body-container {
+    width: 350px;
     background-color: red;
-    margin-top: 30px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 /*# sourceMappingURL=login.css.map */

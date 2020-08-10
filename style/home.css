@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #161616;
   overflow-x: hidden;
   width: 100vw;
   height: auto;
@@ -30,55 +30,6 @@ body {
     font-size: 14px;
     font-weight: 600;
   }
-  #content-container #search-container {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 20px;
-    display: -ms-grid;
-    display: grid;
-    grid-column-gap: 20px;
-    -ms-grid-columns: max-content auto;
-        grid-template-columns: -webkit-max-content auto;
-        grid-template-columns: max-content auto;
-    background-color: #171717;
-    border-radius: 15px;
-    height: 55px;
-    overflow: hidden;
-    padding: 0px 20px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: none;
-  }
-  #content-container #search-container #search-icon {
-    height: 18px;
-    opacity: 30%;
-  }
-  #content-container #search-container input[type=text] {
-    background-color: transparent;
-    border: none;
-    font-family: "Poppins", "sans-serif";
-    color: #fefefe;
-    font-weight: 500;
-    font-size: 14px;
-    outline: none;
-  }
-  #content-container #search-container input[type=text]::-webkit-input-placeholder {
-    opacity: 30%;
-    color: #fefefe;
-  }
-  #content-container #search-container input[type=text]:-ms-input-placeholder {
-    opacity: 30%;
-    color: #fefefe;
-  }
-  #content-container #search-container input[type=text]::-ms-input-placeholder {
-    opacity: 30%;
-    color: #fefefe;
-  }
-  #content-container #search-container input[type=text]::placeholder {
-    opacity: 30%;
-    color: #fefefe;
-  }
   #content-container #myplaylists-container {
     display: -ms-grid;
     display: grid;
@@ -95,68 +46,35 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 95%;
-    margin: 0 auto;
-    overflow: auto;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 0px 10px;
   }
   #content-container #myplaylists-container #playlists-grid #new-playlist-btn {
-    height: 100px;
-    width: 100px;
+    min-height: 100px;
+    min-width: 100px;
     border-radius: 20px;
     border: none;
+    margin-right: 6px;
     background-color: #212121;
-    margin-right: 3px;
     background-image: url("../img/icons/add.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20px;
   }
   #content-container #myplaylists-container #playlists-grid .playlist {
-    width: 100px;
-    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
     border-radius: 20px;
     background-color: red;
-    margin: 0px 3px;
+    margin-right: 6px;
   }
-  #content-container #categories-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: max-content auto;
-        grid-template-rows: -webkit-max-content auto;
-        grid-template-rows: max-content auto;
-    grid-row-gap: 20px;
-    width: 95%;
-    margin: 0 auto;
+  #content-container #myplaylists-container #playlists-grid .last {
+    margin-right: 10px;
   }
-  #content-container #categories-container #categories-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (auto)[2] (90px)[4];
-        grid-template-rows: repeat(2, auto) repeat(4, 90px);
-    grid-column-gap: 6px;
-    grid-row-gap: 6px;
-  }
-  #content-container #categories-container #categories-grid .cat {
-    border-radius: 20px;
-    background-color: red;
-  }
-  #content-container #categories-container #categories-grid .top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 150px;
+  #content-container #myplaylists-container #playlists-grid::-webkit-scrollbar {
+    display: none;
   }
 }
 /*# sourceMappingURL=home.css.map */

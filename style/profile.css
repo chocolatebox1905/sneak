@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #161616;
   overflow-x: hidden;
   width: 100vw;
   height: auto;
@@ -120,8 +120,8 @@ body {
   #content-container #profile-btn-container {
     width: 100%;
     background: #121212;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(18, 18, 18, 0)), color-stop(95%, #121212), to(#121212));
-    background: linear-gradient(0deg, rgba(18, 18, 18, 0) 0%, #121212 95%, #121212 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(1%, rgba(18, 18, 18, 0)), color-stop(16%, rgba(18, 18, 18, 0.123687)), color-stop(74%, #121212), to(#121212));
+    background: linear-gradient(0deg, rgba(18, 18, 18, 0) 1%, rgba(18, 18, 18, 0.123687) 16%, #121212 74%, #121212 100%);
     position: sticky;
     position: -webkit-sticky;
     top: 0px;

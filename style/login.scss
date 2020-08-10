@@ -29,7 +29,20 @@ li {
 }
 
 #logo {
-    height: 2.2vh;
+    height: 2vh;
+}
+
+h1 {
+    font-family: $font;
+    color: #fefefe;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 650px) {
@@ -37,7 +50,7 @@ li {
     #body-container {
         width: 90%;
         margin-top: 15px;
-        background-color: red;
+        background-color: green;
     }
 
 }
@@ -46,11 +59,6 @@ li {
 
 @media only screen and (min-width: 650px) and (max-width: 1050px) {
 
-    #body-container {
-        width: 90%;
-        background-color: red;
-        margin-top: 30px;
-    }
 
 }
 
@@ -58,6 +66,15 @@ li {
 
 @media only screen and (min-width: 1050px) {
 
+    body {
+        overflow: hidden;
+        align-items: center;
 
+        #body-container {
+            width: 350px;
+            background-color: red;
+            height: max-content;
+        }
+    }
 
 }
